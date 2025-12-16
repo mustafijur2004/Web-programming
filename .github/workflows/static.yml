@@ -36,8 +36,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          # Upload Travel Agency Public directory
+          path: 'Travel Agency/Public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
