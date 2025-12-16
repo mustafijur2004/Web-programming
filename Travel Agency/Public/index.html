@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <!-- Navbar -->
@@ -77,15 +78,18 @@
       </div>
     </div>
     <div class="hero-controls">
-      <button class="hero-btn prev" id="prevSlide">❮</button>
-      <div class="hero-dots" id="heroDots"></div>
-      <button class="hero-btn next" id="nextSlide">❯</button>
+      <button class="hero-btn prev" id="prevSlide"><i data-lucide="chevron-left"></i></button>
+      <button class="hero-btn next" id="nextSlide"><i data-lucide="chevron-right"></i></button>
     </div>
+    <div class="hero-dots" id="heroDots"></div>
     <div class="hero-cta">
       <button class="btn btn-primary" onclick="openBookingModal()">Book Your Adventure</button>
       <button class="btn btn-outline" onclick="scrollToSection('tours')">Explore Tours</button>
     </div>
   </section>
+
+  <!-- Hero Dots (Fixed at bottom of viewport) -->
+  <div class="hero-dots" id="heroDots"></div>
 
   <!-- Tours Section -->
   <section class="tours" id="tours">

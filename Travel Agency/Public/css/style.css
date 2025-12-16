@@ -334,7 +334,7 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 
 .hero-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -343,8 +343,8 @@ h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 }
 
 .hero-dot {
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
   border: none;
@@ -584,7 +584,7 @@ section {
   justify-content: center;
   font-size: 3rem;
   color: var(--accent);
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(230, 223, 223, 0.15);
   border-radius: 50%;
 }
 
