@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangladesh Travel Agency - Discover the Beauty of Bangladesh</title>
+  <meta name="description" content="Explore the breathtaking landscapes of Bangladesh with our curated tour packages. From Cox's Bazar beaches to Sundarbans mangroves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i data-lucide="leaf"></i></span>
+        <span class="logo-text">Bangladesh<span class="logo-highlight">Travels</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-cta">Book Now</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-slider" id="heroSlider">
+      <!-- IMAGE: Hero slide 1 - Cox's Bazar (1920x1080px recommended) -->
+      <div class="slide active" style="background-image: url('images/hero/coxs-bazar.jpg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Featured Destination</span>
+          <h1>Cox's Bazar</h1>
+          <p>World's longest natural sea beach stretching 120 kilometers</p>
+        </div>
+      </div>
+      <!-- IMAGE: Hero slide 2 - Sundarbans (1920x1080px recommended) -->
+      <div class="slide" style="background-image: url('images/hero/sundarbans.jpg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">UNESCO Heritage</span>
+          <h1>Sundarbans</h1>
+          <p>Home to the Royal Bengal Tiger and the world's largest mangrove forest</p>
+        </div>
+      </div>
+      <!-- IMAGE: Hero slide 3 - Sylhet (1920x1080px recommended) -->
+      <div class="slide" style="background-image: url('images/hero/sylhet.jpg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Hill Paradise</span>
+          <h1>Sylhet Tea Gardens</h1>
+          <p>Rolling hills covered with lush green tea plantations</p>
+        </div>
+      </div>
+      <!-- IMAGE: Hero slide 4 - Bandarban (1920x1080px recommended) -->
+      <div class="slide" style="background-image: url('images/hero/bandarban.jpg')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-tag">Adventure Awaits</span>
+          <h1>Bandarban Hills</h1>
+          <p>Misty mountains and tribal culture in the Chittagong Hill Tracts</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-btn prev" id="prevSlide">❮</button>
+      <div class="hero-dots" id="heroDots"></div>
+      <button class="hero-btn next" id="nextSlide">❯</button>
+    </div>
+    <div class="hero-cta">
+      <button class="btn btn-primary" onclick="openBookingModal()">Book Your Adventure</button>
+      <button class="btn btn-outline" onclick="scrollToSection('tours')">Explore Tours</button>
+    </div>
+  </section>
+
+  <!-- Tours Section -->
+  <section class="tours" id="tours">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Packages</span>
+        <h2>Popular Tour Packages</h2>
+        <p>Discover the most beautiful destinations in Bangladesh with our carefully curated tour packages</p>
+      </div>
+      <div class="tour-filters">
+        <button class="filter-btn active" data-filter="all">All Tours</button>
+        <button class="filter-btn" data-filter="beach">Beach</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+        <button class="filter-btn" data-filter="cultural">Cultural</button>
+      </div>
+      <div class="tour-grid" id="tourGrid">
+        <!-- Tours will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-us" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why Choose Us</span>
+        <h2>Your Trusted Travel Partner</h2>
+        <p>We make your Bangladesh adventure unforgettable with our expertise and dedication</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="map-pin"></i></div>
+          <h3>Local Expertise</h3>
+          <p>Our guides are locals who know every hidden gem and cultural nuance of Bangladesh</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="tag"></i></div>
+          <h3>Best Value</h3>
+          <p>Competitive pricing without compromising on quality or experience</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+          <h3>Trusted Guides</h3>
+          <p>Certified and experienced guides ensuring your safety and enjoyment</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="headphones"></i></div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock assistance for any queries or emergencies during your trip</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2>What Our Travelers Say</h2>
+        <p>Real experiences from real travelers who explored Bangladesh with us</p>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonial-track" id="testimonialTrack">
+          <!-- Testimonials will be populated by JavaScript -->
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gallery</span>
+        <h2>Capture the Beauty</h2>
+        <p>A glimpse of the stunning landscapes and experiences awaiting you</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="#" class="footer-logo">
+            <span class="logo-icon"><i data-lucide="leaf"></i></span>
+            <span>Bangladesh<span class="logo-highlight">Travels</span></span>
+          </a>
+          <p>Your gateway to exploring the natural beauty, rich culture, and warm hospitality of Bangladesh.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+            <a href="#" class="social-link"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Top Destinations</h4>
+          <ul>
+            <li><a href="#">Cox's Bazar</a></li>
+            <li><a href="#">Sundarbans</a></li>
+            <li><a href="#">Sylhet</a></li>
+            <li><a href="#">Bandarban</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p><i data-lucide="map-pin"></i> 123 Travel Street, Dhaka, Bangladesh</p>
+          <p><i data-lucide="phone"></i> +880 1234 567890</p>
+          <p><i data-lucide="mail"></i> info@bangladeshtravels.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bangladesh Travels. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeBookingModal()"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <h2>Book Your Adventure</h2>
+        <p>Fill in your details and we'll get back to you shortly</p>
+      </div>
+      <form class="booking-form" id="bookingForm" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+880 1XXX XXXXXX">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="destination">Select Destination *</label>
+          <select id="destination" name="destination" required>
+            <option value="">Choose a destination</option>
+            <option value="coxs-bazar">Cox's Bazar Beach</option>
+            <option value="sundarbans">Sundarbans Safari</option>
+            <option value="sylhet">Sylhet Tea Gardens</option>
+            <option value="bandarban">Bandarban Hills</option>
+            <option value="srimangal">Srimangal</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="travelDate">Travel Date *</label>
+            <input type="date" id="travelDate" name="travelDate" required>
+          </div>
+          <div class="form-group">
+            <label for="travelers">Number of Travelers *</label>
+            <input type="number" id="travelers" name="travelers" min="1" max="20" required placeholder="1">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Special Requests</label>
+          <textarea id="message" name="message" rows="3" placeholder="Any special requirements or questions?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Submit Booking Request</button>
+      </form>
+      <div class="booking-success" id="bookingSuccess" style="display: none;">
+        <div class="success-icon"><i data-lucide="check-circle"></i></div>
+        <h3>Booking Request Submitted!</h3>
+        <p>Thank you for your interest. Our team will contact you within 24 hours to confirm your booking.</p>
+        <button class="btn btn-outline" onclick="closeBookingModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()"><i data-lucide="x"></i></button>
+    <button class="lightbox-prev" onclick="changeLightboxImage(-1)">❮</button>
+    <img src="" alt="Gallery Image" id="lightboxImage">
+    <button class="lightbox-next" onclick="changeLightboxImage(1)">❯</button>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
